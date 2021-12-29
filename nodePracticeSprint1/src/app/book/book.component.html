@@ -1,0 +1,9 @@
+<form [formGroup]="newBook">
+    <input placeholder="title" id="name" type="text" formControlName="title" />
+    <input placeholder="subtitle" id="name" type="text" formControlName="subtitle" />
+    <input placeholder="price" id="name" type="text" formControlName="price" />
+    <input placeholder="description" id="name" type="text" formControlName="description" />
+    <!-- <input [(ngModel)]="newBook.subtitle"> -->
+  </form>
+
+<button (click)="onClick()">Edit Book </button>

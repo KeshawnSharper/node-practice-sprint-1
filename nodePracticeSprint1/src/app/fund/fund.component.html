@@ -1,0 +1,11 @@
+<h1>Edit Fund</h1>
+<form [formGroup]="newFund">
+    <input placeholder="Name" id="name" type="text" formControlName="name" />
+    <input placeholder="Asset Class" id="name" type="text" formControlName="asset_class" />
+    <input placeholder="Price" id="name" type="text" formControlName="price" />
+    <input placeholder="Investment Min" id="name" type="text" formControlName="investment_min" /> 
+    <input placeholder="Risk Level" id="name" type="text" formControlName="risk_level" />
+    <input placeholder="Ticker" id="name" type="text" formControlName="ticker" />
+  </form>
+
+<button (click)="onClick()">Edit Fund </button>

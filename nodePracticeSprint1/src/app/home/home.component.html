@@ -1,0 +1,27 @@
+<form [formGroup]="newFund">
+  <input placeholder="Name" id="name" type="text" formControlName="name" />
+  <input placeholder="Asset Class" id="name" type="text" formControlName="asset_class" />
+  <input placeholder="Price" id="name" type="text" formControlName="price" />
+  <input placeholder="Investment Min" id="name" type="text" formControlName="investment_min" /> 
+  <input placeholder="Risk Level" id="name" type="text" formControlName="risk_level" />
+  <input placeholder="Ticker" id="name" type="text" formControlName="ticker" />
+    <!-- <input [(ngModel)]="newBook.subtitle"> -->
+  </form>
+  <button (click)="onCreate()">Submit new Fund</button>
+  
+  <div class="grid-container">
+    <div class="flip-card grid-item" *ngFor="let fund of Funds">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <a routerLink="fund/{{fund.id}}" class="bar"> {{fund.name}}</a>
+          </div>
+          <div class="flip-card-back">
+            <a routerLink="fund/{{fund.id}}" class="bar"> {{fund.name}}</a>
+            <h6>{{fund.asset_class}}</h6>
+                <h6>{{fund.price}}</h6>
+                <button *ngIf="fund.id" (click)="onDelete(fund.id)">Delete</button>
+
+          </div>
+      </div>
+    </div>
+    </div>
